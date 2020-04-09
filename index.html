@@ -13,7 +13,7 @@
 
     <div class="box">
 
-      <div class="box is-auto">        
+      <div class="box is-auto">
         <img class="logo" src="images/covid.jpg" alt="">
 
         <div>
@@ -21,7 +21,7 @@
           <h3 class="subtitle">Collection of Data</h3>
         </div>
       </div>
-     
+
 
       <form name="covid-19-estimator" data-form-estimator>
 
@@ -36,15 +36,7 @@
         </div>
 
         <div class="columns is-multiline">
-          <div class="column is-12-tablet is-6-desktop">
-            <label class="label" for="time-to-elapse">Time To Elapse</label>
-            <div class="control has-icons-left">
-              <input class="input" type="number" id="time-to-elapse" name="time-to-elapse" data-time-to-elapse required>
-              <span class="icon is-small is-left">
-                <i class="fas fa-clock"></i>
-              </span>
-            </div>
-          </div>
+
 
           <div class="column is-12-tablet is-6-desktop">
             <label class="label" for="reported-cases">Reported Cases</label>
@@ -56,10 +48,6 @@
             </div>
           </div>
 
-
-        </div>
-
-        <div class="columns is-multiline">
           <div class="column is-12-tablet is-6-desktop">
             <label class="label" for="total-hospital-beds">Total Hospital Beds</label>
             <div class="control has-icons-left">
@@ -67,6 +55,19 @@
                 data-total-hospital-beds required>
               <span class="icon is-small is-left">
                 <i class="fas fa-bed"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-12-tablet is-6-desktop">
+            <label class="label" for="time-to-elapse">Time To Elapse</label>
+            <div class="control has-icons-left">
+              <input class="input" type="number" id="time-to-elapse" name="time-to-elapse" data-time-to-elapse required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-clock"></i>
               </span>
             </div>
           </div>
@@ -96,6 +97,29 @@
         </div>
       </form>
 
+      <div class="box impacts is-hidden">
+        <div class="columns is-multiline">
+          <!-- Impact Cases-->
+          <div class="column is-12-tablet is-6-desktop">
+            <h3 class="subtitle is-purple">Impact Cases</h3>
+            <table class="table is-hoverable is-fullwidth">
+              <tbody id="impact">
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Severe Impact Cases -->
+          <div class="column is-12-tablet is-6-desktop">
+            <h3 class="subtitle is-purple">Severe Impact Cases</h3>
+            <table class="table is-hoverable is-fullwidth">
+              <tbody id="severeImpact">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
 
 
