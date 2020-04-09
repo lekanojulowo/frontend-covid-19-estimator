@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Estimator</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+
+    <div class="box">
+
+      <div class="box is-auto">        
+        <img class="logo" src="images/covid.jpg" alt="">
+
+        <div>
+          <h1 class="title is-purple">COVID-19 Estimator</h1>
+          <h3 class="subtitle">Collection of Data</h3>
+        </div>
+      </div>
+     
+
+      <form name="covid-19-estimator" data-form-estimator>
+
+        <div class="field">
+          <label class="label" for="population">Population</label>
+          <div class="control has-icons-left">
+            <input class="input" type="number" id="population" name="population" data-population required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-users"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-12-tablet is-6-desktop">
+            <label class="label" for="time-to-elapse">Time To Elapse</label>
+            <div class="control has-icons-left">
+              <input class="input" type="number" id="time-to-elapse" name="time-to-elapse" data-time-to-elapse required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-clock"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="column is-12-tablet is-6-desktop">
+            <label class="label" for="reported-cases">Reported Cases</label>
+            <div class="control has-icons-left">
+              <input class="input" type="number" id="reported-cases" name="reported-cases" data-reported-cases required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-file-alt"></i>
+              </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-12-tablet is-6-desktop">
+            <label class="label" for="total-hospital-beds">Total Hospital Beds</label>
+            <div class="control has-icons-left">
+              <input class="input" type="number" id="total-hospital-beds" name="total-hospital-beds"
+                data-total-hospital-beds required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-bed"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="column is-12-tablet  is-6-desktop">
+            <label class="label" for="period-type"> Period Type</label>
+            <div class="control has-icons-left">
+              <div class="select">
+                <select id="period-type" name="period-type" data-period-type required>
+                  <option value="">pick a period type...</option>
+                  <option value="days">days</option>
+                  <option value="weeks">weeks</option>
+                  <option value="months">months</option>
+                </select>
+              </div>
+              <span class="icon is-small is-left">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="field">
+          <div class="buttons">
+            <button type="submit" class="button is-success" data-go-estimate="">Submit</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

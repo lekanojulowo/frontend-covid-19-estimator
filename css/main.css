@@ -1,0 +1,21 @@
+.pointer-event-none {
+  pointer-events: none;
+}
+
+.logo {
+  width: 60px;
+  height: 50px;
+  padding-right: 0.5rem;
+}
+
+.is-auto {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.is-purple {
+  color: purple;
+}
