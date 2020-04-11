@@ -1,25 +1,7 @@
 "use strict";
-
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('service-worker.js')
-}
-
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', function () {
-//     navigator.serviceWorker.register('/sw.js').then(function (registration) {
-//       // Registration was successful
-//       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-//     }, function (err) {
-//       // registration failed :(
-//       console.log('ServiceWorker registration failed: ', err);
-//     });
-//   });
-// }
-
 const $q = document.querySelector.bind(document);
 const $qa = document.querySelectorAll.bind(document);
 
-document.body.onload = $q('#population').focus();
 
 // Estimator
 const covid19ImpactEstimator = (data) => {
@@ -274,3 +256,5 @@ goEstimate.addEventListener("click", (event) => {
   population: 66622705,
   totalHospitalBeds: 1380614
 } */
+
+document.addEventListener('DOMContentLoaded', () => $q('#population').focus());
