@@ -4,151 +4,116 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="description" content=" covid 19 impact estimator, analysis and projection">
     <meta name="keywords"
       content="covid19, estimator, covid-19-estimator, covid 19 estimator, covid 19 impact projection, covid 19 impact analysis, covid 19 impact analysis and projectionand projection">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="author" content="Lekan Ojulowo">
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/logo192.png" />
+    <link rel="apple-touch-icon" href="images/covid19@192.png" />
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <title>COVID-19 Estimator</title>
   </head>
 
   <body>
-    <noscript>You need to enable JavaScript to run this app effectively as some features may not be implemented without
-      it.</noscript>
-    <main class="box main-container">
+    <div class="wrapper">
+      <main class="content">
+        <aside class="side">
+          <figure class="picture" id="picture">
+            <img class="banner-img" src="images/covid19.jpg" srcset="
+							images/covid19.jpg 1x,
+							images/covid19@2x.jpg 2x,
+							images/covid19@3x.jpg 3x" alt="covid 19 structure" aria-label="banner-image" id="banner-image">
+          </figure>
+          <div class="banner-text">
+            <h1 class="title">COVID-19 Estimator</h1>
+          </div>
+        </aside>
 
-      <header class="box is-auto">
-        <img class="logo" src="images/covid.jpg" alt="covid 19 logo/structure" aria-label="banner-image">
-
-        <div>
-          <h1 class="title is-purple">COVID-19 Estimator</h1>
+        <div class="form-wrapper">
           <h3 class="subtitle">Collection of Data</h3>
+
+          <form name="covid-19-estimator" class="side-form" data-form-estimator aria-label="covid-19-estimator-form">
+
+            <div class="field">
+              <label for="population">Population</label>
+              <input type="number" id="population" name="population" accesskey="p" data-population required>
+            </div>
+
+            <div class="field">
+              <label for="reported-cases">Reported Cases</label>
+              <input type="number" id="reported-cases" name="reported-cases" accesskey="c" data-reported-cases required>
+            </div>
+
+            <div class="field">
+              <label for="total-hospital-beds">Total Hospital Beds</label>
+
+              <input type="number" id="total-hospital-beds" name="total-hospital-beds" accesskey="b"
+                data-total-hospital-beds required>
+            </div>
+
+
+
+            <div class="field">
+              <label for="time-to-elapse">Time To Elapse</label>
+
+              <input type="number" id="time-to-elapse" name="time-to-elapse" accesskey="m" data-time-to-elapse required>
+            </div>
+
+            <div class="field">
+              <label for="period-type"> Period Type</label>
+              <select id="period-type" name="period-type" accesskey="t" data-period-type required>
+                <option value="">pick a period type...</option>
+                <option value="days">days</option>
+                <option value="weeks">weeks</option>
+                <option value="months">months</option>
+              </select>
+            </div>
+
+
+            <div class="field">
+              <button type="submit" aria-label="submit" class="button" accesskey="g" data-go-estimate="">Submit</button>
+            </div>
+          </form>
         </div>
-      </header>
-
-      <section>
-        <form name="covid-19-estimator" data-form-estimator aria-label="covid-19-estimator-form">
-
-          <div class="field">
-            <label class="label is-purple" for="population">Population</label>
-            <div class="control has-icons-left">
-              <input class="input" type="number" id="population" name="population" accesskey="p" data-population
-                required>
-              <span class="icon is-small is-left">
-                <i class="fas fa-users"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="columns is-multiline">
-
-
-            <div class="column is-12-tablet is-6-desktop">
-              <label class="label is-purple" for="reported-cases">Reported Cases</label>
-              <div class="control has-icons-left">
-                <input class="input" type="number" id="reported-cases" name="reported-cases" accesskey="c"
-                  data-reported-cases required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-file-alt"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="column is-12-tablet is-6-desktop">
-              <label class="label is-purple" for="total-hospital-beds">Total Hospital Beds</label>
-              <div class="control has-icons-left">
-                <input class="input" type="number" id="total-hospital-beds" name="total-hospital-beds" accesskey="b"
-                  data-total-hospital-beds required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-bed"></i>
-                </span>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="columns is-multiline">
-            <div class="column is-12-tablet is-6-desktop">
-              <label class="label is-purple" for="time-to-elapse">Time To Elapse</label>
-              <div class="control has-icons-left">
-                <input class="input" type="number" id="time-to-elapse" name="time-to-elapse" accesskey="m"
-                  data-time-to-elapse required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-clock"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="column is-12-tablet  is-6-desktop">
-              <label class="label is-purple" for="period-type"> Period Type</label>
-              <div class="control has-icons-left">
-                <div class="select">
-                  <select id="period-type" name="period-type" accesskey="t" data-period-type required>
-                    <option value="">pick a period type...</option>
-                    <option value="days">days</option>
-                    <option value="weeks">weeks</option>
-                    <option value="months">months</option>
-                  </select>
-                </div>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-calendar-alt"></i>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="field">
-            <div class="buttons">
-              <button type="submit" aria-label="submit" class="button is-success" accesskey="g"
-                data-go-estimate="">Submit</button>
-            </div>
-          </div>
-        </form>
-      </section>
-
-      <section class="box impacts is-hidden">
-        <header>
-          <h2 class="title is-purple">Covid 19 Estimator Analysis</h2>
-        </header>
-        <div class="columns is-multiline">
+      </main>
+      <!-- is-hidden -->
+      <div class="impacts is-hidden">
+        <h2 class="title">Covid 19 Estimator Analysis</h2>
+        <div class="table-wrapper">
           <!-- Impact Cases-->
-          <section class="column is-12-tablet is-6-desktop">
-            <header>
-              <h3 class="subtitle is-purple">Impact Cases</h3>
-            </header>
-            <table class="table is-hoverable is-fullwidth">
-              <tbody id="impact">
+          <table class="table is-hoverable is-fullwidth">
+            <caption>
+              <h3 class="subtitle">Impact Cases</h3>
+            </caption>
+            <tbody id="impact">
 
-              </tbody>
-            </table>
-          </section>
+            </tbody>
+          </table>
 
           <!-- Severe Impact Cases -->
-          <section class="column is-12-tablet is-6-desktop">
-            <header>
-              <h3 class="subtitle is-purple">Severe Impact Cases</h3>
-            </header>
-            <table class="table is-hoverable is-fullwidth">
-              <thead></thead>
-              <tfoot></tfoot>
-              <tbody id="severeImpact">
+          <table class="table is-hoverable is-fullwidth">
+            <caption>
+              <h3 class="subtitle">Severe Impact Cases</h3>
+            </caption>
+            <tbody id="severeImpact">
 
-              </tbody>
-            </table>
-          </section>
+            </tbody>
+          </table>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
 
+    <noscript>
+      <p>
+        You need to enable JavaScript to run this app effectively as some features may not be implemented without
+        it.
+      </p>
+    </noscript>
 
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script defer src="js/main.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
@@ -156,26 +121,6 @@
           navigator.serviceWorker.register('service-worker.js');
         });
       }
-      // .then(function (registration) {
-      //       // Registration was successful
-      //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      //     }, function (err) {
-      //       // registration failed :(
-      //       console.log('ServiceWorker registration failed: ', err);
-      //     });
-      //   });
-      // }
-      // if ('serviceWorker' in navigator) {
-      //   window.addEventListener('load', function () {
-      //     navigator.serviceWorker.register('service-worker.js').then(function (registration) {
-      //       // Registration was successful
-      //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      //     }, function (err) {
-      //       // registration failed :(
-      //       console.log('ServiceWorker registration failed: ', err);
-      //     });
-      //   });
-      // }
     </script>
   </body>
 
