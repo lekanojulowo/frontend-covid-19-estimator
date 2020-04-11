@@ -2,16 +2,23 @@
 const $q = document.querySelector.bind(document);
 const $qa = document.querySelectorAll.bind(document);
 
+document.body.onload = $q('#population').focus();
+
 // Estimator
 const covid19ImpactEstimator = (data) => {
 	// Destructuring the given data
 	const {
-		region: { avgDailyIncomeInUSD, avgDailyIncomePopulation },
+		region: {
+			avgDailyIncomeInUSD,
+			avgDailyIncomePopulation
+		},
 		periodType,
 		reportedCases,
 		totalHospitalBeds,
 	} = data;
-	let { timeToElapse } = data;
+	let {
+		timeToElapse
+	} = data;
 
 	// Custom Functions and Variables
 

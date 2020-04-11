@@ -4,127 +4,152 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 Estimator</title>
-    <link rel="stylesheet" href="css/bulma.min.css">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content=" covid 19 impact estimator, analysis and projection">
+    <meta name="keywords"
+      content="covid19, estimator, covid-19-estimator, covid 19 estimator, covid 19 impact projection, covid 19 impact analysis, covid 19 impact analysis and projectionand projection">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Lekan Ojulowo">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logo192.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <title>COVID-19 Estimator</title>
   </head>
 
   <body>
+    <noscript>You need to enable JavaScript to run this app effectively as some features may not be implemented without
+      it.</noscript>
+    <main class="box main-container">
 
-    <div class="box">
-
-      <div class="box is-auto">
-        <img class="logo" src="images/covid.jpg" alt="">
+      <header class="box is-auto">
+        <img class="logo" src="images/covid.jpg" alt="covid 19 logo/structure" aria-label="banner-image">
 
         <div>
           <h1 class="title is-purple">COVID-19 Estimator</h1>
           <h3 class="subtitle">Collection of Data</h3>
         </div>
-      </div>
+      </header>
 
+      <section>
+        <form name="covid-19-estimator" data-form-estimator aria-label="covid-19-estimator-form">
 
-      <form name="covid-19-estimator" data-form-estimator>
-
-        <div class="field">
-          <label class="label" for="population">Population</label>
-          <div class="control has-icons-left">
-            <input class="input" type="number" id="population" name="population" data-population required>
-            <span class="icon is-small is-left">
-              <i class="fas fa-users"></i>
-            </span>
-          </div>
-        </div>
-
-        <div class="columns is-multiline">
-
-
-          <div class="column is-12-tablet is-6-desktop">
-            <label class="label" for="reported-cases">Reported Cases</label>
+          <div class="field">
+            <label class="label" for="population">Population</label>
             <div class="control has-icons-left">
-              <input class="input" type="number" id="reported-cases" name="reported-cases" data-reported-cases required>
+              <input class="input" type="number" id="population" name="population" accesskey="p" data-population
+                required>
               <span class="icon is-small is-left">
-                <i class="fas fa-file-alt"></i>
+                <i class="fas fa-users"></i>
               </span>
             </div>
           </div>
 
-          <div class="column is-12-tablet is-6-desktop">
-            <label class="label" for="total-hospital-beds">Total Hospital Beds</label>
-            <div class="control has-icons-left">
-              <input class="input" type="number" id="total-hospital-beds" name="total-hospital-beds"
-                data-total-hospital-beds required>
-              <span class="icon is-small is-left">
-                <i class="fas fa-bed"></i>
-              </span>
-            </div>
-          </div>
+          <div class="columns is-multiline">
 
-        </div>
 
-        <div class="columns is-multiline">
-          <div class="column is-12-tablet is-6-desktop">
-            <label class="label" for="time-to-elapse">Time To Elapse</label>
-            <div class="control has-icons-left">
-              <input class="input" type="number" id="time-to-elapse" name="time-to-elapse" data-time-to-elapse required>
-              <span class="icon is-small is-left">
-                <i class="fas fa-clock"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="column is-12-tablet  is-6-desktop">
-            <label class="label" for="period-type"> Period Type</label>
-            <div class="control has-icons-left">
-              <div class="select">
-                <select id="period-type" name="period-type" data-period-type required>
-                  <option value="">pick a period type...</option>
-                  <option value="days">days</option>
-                  <option value="weeks">weeks</option>
-                  <option value="months">months</option>
-                </select>
+            <div class="column is-12-tablet is-6-desktop">
+              <label class="label" for="reported-cases">Reported Cases</label>
+              <div class="control has-icons-left">
+                <input class="input" type="number" id="reported-cases" name="reported-cases" accesskey="c"
+                  data-reported-cases required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-file-alt"></i>
+                </span>
               </div>
-              <span class="icon is-small is-left">
-                <i class="fas fa-calendar-alt"></i>
+            </div>
+
+            <div class="column is-12-tablet is-6-desktop">
+              <label class="label" for="total-hospital-beds">Total Hospital Beds</label>
+              <div class="control has-icons-left">
+                <input class="input" type="number" id="total-hospital-beds" name="total-hospital-beds" accesskey="b"
+                  data-total-hospital-beds required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-bed"></i>
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="columns is-multiline">
+            <div class="column is-12-tablet is-6-desktop">
+              <label class="label" for="time-to-elapse">Time To Elapse</label>
+              <div class="control has-icons-left">
+                <input class="input" type="number" id="time-to-elapse" name="time-to-elapse" accesskey="m"
+                  data-time-to-elapse required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-clock"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="column is-12-tablet  is-6-desktop">
+              <label class="label" for="period-type"> Period Type</label>
+              <div class="control has-icons-left">
+                <div class="select">
+                  <select id="period-type" name="period-type" accesskey="t" data-period-type required>
+                    <option value="">pick a period type...</option>
+                    <option value="days">days</option>
+                    <option value="weeks">weeks</option>
+                    <option value="months">months</option>
+                  </select>
+                </div>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-calendar-alt"></i>
+              </div>
             </div>
           </div>
-        </div>
 
 
-        <div class="field">
-          <div class="buttons">
-            <button type="submit" class="button is-success" data-go-estimate="">Submit</button>
+          <div class="field">
+            <div class="buttons">
+              <button type="submit" aria-label="submit" class="button is-success" accesskey="g"
+                data-go-estimate="">Submit</button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </section>
 
-      <div class="box impacts is-hidden">
+      <section class="box impacts is-hidden">
+        <header>
+          <h2 class="title is-purple">Covid 19 Estimator Analysis</h2>
+        </header>
         <div class="columns is-multiline">
           <!-- Impact Cases-->
-          <div class="column is-12-tablet is-6-desktop">
-            <h3 class="subtitle is-purple">Impact Cases</h3>
+          <section class="column is-12-tablet is-6-desktop">
+            <header>
+              <h3 class="subtitle is-purple">Impact Cases</h3>
+            </header>
             <table class="table is-hoverable is-fullwidth">
               <tbody id="impact">
 
               </tbody>
             </table>
-          </div>
+          </section>
 
           <!-- Severe Impact Cases -->
-          <div class="column is-12-tablet is-6-desktop">
-            <h3 class="subtitle is-purple">Severe Impact Cases</h3>
+          <section class="column is-12-tablet is-6-desktop">
+            <header>
+              <h3 class="subtitle is-purple">Severe Impact Cases</h3>
+            </header>
             <table class="table is-hoverable is-fullwidth">
+              <thead></thead>
+              <tfoot></tfoot>
               <tbody id="severeImpact">
 
               </tbody>
             </table>
-          </div>
+          </section>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
 
-    <script src="js/all.min.js"></script>
-    <script src="js/main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="js/main.js"></script>
   </body>
 
 </html>

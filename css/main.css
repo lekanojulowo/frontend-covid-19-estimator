@@ -32,10 +32,9 @@
 }
 
 .alert-success {
-  background-color: rgba(0, 255, 0, .8);
+  background-color: rgb(0, 255, 0);
 }
 
-.alert-danger,
 .alert-error {
   background-color: rgba(255, 0, 0, .8);
 }
@@ -46,4 +45,12 @@
 
 .is-hidden {
   display: none;
+}
+
+body {
+  background-color: red;
+}
+
+.main-container {
+  background-color: rgba(0, 0, 0, .3);
 }
