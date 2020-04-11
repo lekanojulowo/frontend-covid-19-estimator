@@ -15,8 +15,8 @@ html {
   line-height: 1.5;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 100%;
+  min-width: 300px;
   overflow-x: hidden;
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -24,18 +24,17 @@ html {
 .wrapper {
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 1rem;
 }
 
 .side {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .field {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 .field label {
@@ -117,9 +116,6 @@ th {
   flex: 1;
 }
 
-.form-wrapper .subtitle {
-  margin-bottom: 1rem;
-}
 
 .alert {
   position: absolute;
@@ -141,7 +137,7 @@ th {
 }
 
 .impacts {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .is-hidden {
