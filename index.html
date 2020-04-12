@@ -66,12 +66,13 @@
 
 						<div class="field">
 							<label for="period-type"> Period Type</label>
-							<select id="period-type" name="period-type" accesskey="t" data-period-type required>
-								<option value="">pick a period type...</option>
-								<option value="days">days</option>
-								<option value="weeks">weeks</option>
-								<option value="months">months</option>
-							</select>
+							<input id="period-type" name="period-type" accesskey="t" data-period-type required list="periodType"
+								placeholder="e.g days or weeks or months">
+							<datalist id="periodType">
+								<option value="days">
+								<option value="weeks">
+								<option value="months">
+							</datalist>
 						</div>
 
 						<div class="field">
